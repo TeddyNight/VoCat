@@ -1492,7 +1492,7 @@ func pollDeviceSnapshots(
 					logger.Warn("modem snapshot refresh failed", "device_id", entry.ID, "error", refreshErr)
 				}
 				if refreshErr == nil && ctx.Err() == nil {
-					enforceCardRegion(ctx, logger, database, manager, entry.ID, &snapshot)
+					//enforceCardRegion(ctx, logger, database, manager, entry.ID, &snapshot)
 					enforceDefaultSafeCardPolicy(ctx, logger, database, manager, entry.ID, &snapshot)
 					recoverRegistration(entry, snapshot, recoveryTracker.observe(entry.ID, &snapshot, time.Now()))
 				}
