@@ -1724,6 +1724,7 @@ func enforceCardRegion(
 		// Region unknown: hold the current state rather than block or restore.
 		return
 	}
+	/*
 	if reason := device.RegionBlockReason(imsi); reason != "" {
 		if !snapshot.FlightMode {
 			flightContext, cancelFlight := context.WithTimeout(ctx, flightModeTransitionTimeout)
@@ -1762,6 +1763,7 @@ func enforceCardRegion(
 		return
 	}
 	liftCardRegionBlock(ctx, logger, database, manager, id, snapshot)
+	*/
 }
 
 // liftCardRegionBlock removes the regional marker once an allowed SIM is
