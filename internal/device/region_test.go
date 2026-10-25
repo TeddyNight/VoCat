@@ -2,8 +2,6 @@ package device
 
 import (
 	"context"
-	"errors"
-	"strings"
 	"testing"
 )
 
